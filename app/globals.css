@@ -91,3 +91,7 @@ html {
   transform: scale(1.05);
   color: #e2b4f5b2; /* Hover color - Gray */
 }
+
+.custom-group:hover .translate-y-5 {
+  transform: translateY(11px);
+}
