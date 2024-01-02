@@ -28,7 +28,7 @@ const SkillText = () => {
         variants={slideInFromRight(0.5)}
         className='cursive text-[20px] text-gray-200 mb-10 mt-[10px] text-center'
         >
-          I'm a Go Lang developer with a passion for building web applications and APIs. I'm currently looking for a full-time position as a Go Lang developer.
+          I&apos;m a Go Lang developer with a passion for building web applications and APIs. I&apos;m currently looking for a full-time position as a Go Lang developer.
         </motion.div>
 
     </div>
