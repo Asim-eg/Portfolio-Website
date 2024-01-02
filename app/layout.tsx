@@ -8,7 +8,7 @@ import Footer from '@/components/main/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Asim Altaf',
+  title: `Asim Altaf`,
   description: 'Portfolio of Asim Altaf',
 };
 
@@ -25,9 +25,9 @@ export default function RootLayout({
         <StarsCanvas />
         <Navbar />
         {children}
-        
+        <Footer />
       </body>
-      <Footer />
+      
     </html>
   );
 }

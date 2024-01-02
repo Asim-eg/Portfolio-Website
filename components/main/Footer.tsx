@@ -54,8 +54,7 @@ const Footer = () => {
             </p>
             <p className="flex flex-row items-center my-[15px] cursor-pointer hover:cursor-pointer">
               <HiOutlineMail />
-              <span className="text-[15px] ml-[6px]"
-              >
+              <span className="text-[15px] ml-[6px]">
                 asimaltaf.dev@gmail.com
               </span>
             </p>
