@@ -14,6 +14,7 @@ const HeroContent = () => {
     >
 
       <div
+      id = "about-me"
       className='h-full w-full flex flex-col gap-5 justify-center m-auto text-start'
       >
         <motion.div

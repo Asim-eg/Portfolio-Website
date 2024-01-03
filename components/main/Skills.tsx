@@ -1,9 +1,9 @@
 import {
   Backend_skill,
+  Skill_data,
   Frontend_skill,
   Full_stack,
   Other_skill,
-  Skill_data,
 } from '@/constants';
 import React from 'react';
 import SkillData from '../sub/SkillData';
@@ -12,8 +12,9 @@ import SkillText from '../sub/SkillText';
 const Skills = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center gap-3 h-full relative pb-80 overflow-hidden py-20"
+      className="flex flex-col items-center justify-center gap-3 h-full relative pb-80 z-[20] overflow-hidden py-20"
       style={{ transform: 'scale(0.9)' }}
+      id = "skills"
     >
       <SkillText />
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">

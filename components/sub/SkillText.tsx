@@ -6,8 +6,8 @@ import { SparklesIcon } from '@heroicons/react/24/solid'
 
 const SkillText = () => {
   return (
-    <div
-    className='w-full h-auto flex flex-col items-center justify-center'
+    <div style={{zIndex:12000}}
+    className='w-full  h-auto flex flex-col items-center justify-center'
     >
       <motion.div
         className='Welcome-box py-[8px] px-[8px] border border-[#7042f88b] opacity-[0.9]'
