@@ -5,6 +5,9 @@ import React from 'react';
 import { workerData } from 'worker_threads';
 
 const Navbar = () => {
+
+
+
   function smoothScroll(event: any, targetId: any) {
     event.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -22,13 +25,16 @@ const Navbar = () => {
           className="h-auto w-auto flex flex-row items-center"
           href="#about-me"
         >
+
           <Image
-            src="/NavLogo.png"
+            src="/home.png"
             alt="Logo"
-            width={70}
-            height={70}
+            color='white'
+            width={40}
+            height={40}
             className="cursor-pointer hover:animate-slowspin"
           />
+          
 
           <span className="font-bold ml-[10px] hidden md:block text-gray-300">
             Asim Altaf
