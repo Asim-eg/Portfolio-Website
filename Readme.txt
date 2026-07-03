@@ -1,2 +1,0 @@
-1. npm install --save-dev framer-motion three react-intersection-observer @react-three/drei @react-three/fiber
-2. npm install react-icons

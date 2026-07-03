@@ -1,20 +1,28 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
-const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+export default {
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        bg: "var(--bg)",
+        surface: "var(--surface)",
+        border: "var(--border)",
+        text: "var(--text)",
+        muted: "var(--muted)",
+        ember: "var(--ember)",
+        emberhi: "var(--emberhi)",
+        calm: "var(--calm)",
+      },
+      fontFamily: {
+        display: ['"Kanit"', "Inter", "sans-serif"],
+        inter: ['"Kanit"', "Inter", "sans-serif"],
+        mono: ['"JetBrains Mono"', "monospace"],
+      },
+      boxShadow: {
+        ember: "0 0 44px rgba(182, 0, 168, 0.2)",
       },
     },
   },
   plugins: [],
-}
-export default config
+} satisfies Config;
