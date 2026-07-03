@@ -210,7 +210,7 @@ education:
     (FAST-NUCES)"
   years: "2019 – 2023"
   campusLabel: "FAST-NUCES Islamabad Campus"
-  campusUrl: "https://isb.nu.edu.pk/"
+  campusUrl: "https://isb.nu.edu.pk/NEW/this.html"
   blurb: "FAST-NUCES is where I built the computer science base behind the telecom systems I work on now: operating systems, networking, databases, and the habit of debugging from first principles."
   certificationsTitle: "Certifications & focused learning"
   certifications:
