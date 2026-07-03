@@ -1,20 +1,37 @@
 import { useState } from "react";
-import { CalendarDays, ExternalLink, MapPin } from "lucide-react";
+import {
+  CalendarDays,
+  ExternalLink,
+  MapPin,
+  PhoneCall,
+  RadioTower,
+  ServerCog,
+  type LucideIcon,
+} from "lucide-react";
 import { FadeIn, GhostButton } from "../components/Motion";
 import { Panel } from "../components/Panel";
 import { profile, type ExperienceEntry } from "../lib/content";
 
+const companyIcons: Array<[string, LucideIcon]> = [
+  ["SAFARIFONE", RadioTower],
+  ["CONTACTVA", PhoneCall],
+  ["ZIXEL", ServerCog],
+];
+
+function iconForCompany(company: string) {
+  const normalized = company.toUpperCase().replace(/\s+/g, "");
+  return companyIcons.find(([needle]) => normalized.includes(needle))?.[1] ?? ServerCog;
+}
+
 function WorkCard({ entry, index, isActive }: { entry: ExperienceEntry; index: number; isActive: boolean }) {
+  const CompanyIcon = iconForCompany(entry.company);
+
   return (
-    <FadeIn
-      aria-labelledby={`experience-tab-${index}`}
-      className={`experience-card${isActive ? " is-active" : ""}`}
-      delay={index * 0.08}
-      id={`experience-panel-${index}`}
-      role="tabpanel"
-      y={28}
-    >
+    <FadeIn className={`experience-card${isActive ? " is-active" : ""}`} delay={index * 0.08} y={28}>
       <div className="experience-head">
+        <span className="experience-company-icon">
+          <CompanyIcon aria-hidden="true" size={24} />
+        </span>
         <div>
           <h3>{entry.company}</h3>
           <p>{entry.role}</p>
@@ -40,6 +57,18 @@ function WorkCard({ entry, index, isActive }: { entry: ExperienceEntry; index: n
 
       {entry.note ? <p className="experience-note">{entry.note}</p> : null}
 
+      {entry.impact ? (
+        <aside className="experience-impact" aria-label={`${entry.company} impact summary`}>
+          <span>{entry.impact.label}</span>
+          <p>{entry.impact.text}</p>
+          <div>
+            {entry.impact.tags.map((tag) => (
+              <strong key={tag}>{tag}</strong>
+            ))}
+          </div>
+        </aside>
+      ) : null}
+
       <GhostButton className="experience-link" href={profile.linkedin} rel="noreferrer" target="_blank">
         {profile.actions.details}
         <ExternalLink aria-hidden="true" size={15} />
@@ -57,16 +86,13 @@ export function Work() {
         <h2>{profile.sections.work}</h2>
       </div>
 
-      <div className="experience-tabs" role="tablist" aria-label="Experience companies">
+      <div className="experience-tabs" aria-label="Experience companies">
         {profile.experience.map((entry, index) => (
           <button
-            aria-controls={`experience-panel-${index}`}
-            aria-selected={activeExperience === index}
+            aria-pressed={activeExperience === index}
             className="experience-tab"
-            id={`experience-tab-${index}`}
             key={entry.company}
             onClick={() => setActiveExperience(index)}
-            role="tab"
             type="button"
           >
             <strong>{entry.company}</strong>

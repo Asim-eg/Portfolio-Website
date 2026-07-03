@@ -13,15 +13,16 @@
   --text-strong: #f6fbff;
   --muted: rgba(223, 231, 238, 0.68);
   --dim: rgba(223, 231, 238, 0.48);
-  --red: #d6262b;
+  --red: #e1262f;
   --gold: #ffd166;
-  --orange: #ff8a1f;
+  --orange: #ff7426;
   --magenta: var(--red);
   --cyan: var(--gold);
   --amber: var(--orange);
-  --gradient: linear-gradient(122deg, #ffd166 0%, #d6262b 52%, #ff8a1f 100%);
-  --heading-gradient: linear-gradient(180deg, #fff8d7 0%, #ffd166 44%, #ff9f2d 67%, #d6262b 100%);
-  --metal-gradient: linear-gradient(180deg, #fff7d5 0%, #ffd166 48%, #b45f16 100%);
+  --gradient: linear-gradient(122deg, #ffd166 0%, #e1262f 42%, #ff462f 68%, #ff9d2e 100%);
+  --heading-gradient: linear-gradient(180deg, #fff8d7 0%, #ffd166 30%, #ff6b2b 58%, #e1262f 100%);
+  --metal-gradient: linear-gradient(180deg, #fff8d7 0%, #ffd166 34%, #ff8a1f 56%, #d6262b 100%);
+  --arc-glow: 0 0 20px rgba(225, 38, 47, 0.35), 0 0 42px rgba(255, 209, 102, 0.16);
   --shadow: 0 24px 90px rgba(0, 0, 0, 0.46);
 }
 
@@ -69,6 +70,30 @@ body::before {
     radial-gradient(circle at 50% 88%, rgba(255, 138, 31, 0.08), transparent 28rem),
     var(--bg);
   background-size: 58px 58px, 58px 58px, auto, auto, auto, auto;
+}
+
+body::after {
+  position: fixed;
+  inset: -20% 0;
+  z-index: -19;
+  content: "";
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 4rem,
+      rgba(225, 38, 47, 0.075) 4.05rem 4.1rem,
+      transparent 4.16rem 8rem
+    ),
+    repeating-linear-gradient(
+      180deg,
+      transparent 0 1.8rem,
+      rgba(255, 209, 102, 0.08) 1.86rem 1.92rem,
+      transparent 2rem 8.5rem
+    );
+  opacity: 0.26;
+  mask-image: linear-gradient(180deg, transparent 0%, black 16%, black 84%, transparent 100%);
+  animation: iron-rain 18s linear infinite;
 }
 
 a {
@@ -183,6 +208,34 @@ button {
 
 .panel-heading h2 {
   font-size: 6rem;
+}
+
+.panel-heading h2,
+.contact-title,
+.hero-title,
+.experience-head h3,
+.brand-link {
+  background-size: 175% auto;
+  animation: text-shine 7s ease-in-out infinite;
+}
+
+@keyframes text-shine {
+  0%,
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 0 rgba(225, 38, 47, 0));
+  }
+
+  45% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 18px rgba(225, 38, 47, 0.22));
+  }
+}
+
+@keyframes iron-rain {
+  to {
+    transform: translate3d(0, 12rem, 0);
+  }
 }
 
 .gradient-button,
@@ -615,6 +668,98 @@ header.fixed nav {
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
 }
 
+.skills-intro,
+.skill-group,
+.skill-chip,
+.about-card,
+.location-card,
+.hobby-card,
+.craft-card,
+.experience-card,
+.education-card,
+.certification-item,
+.hero-stats div {
+  position: relative;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.skill-group:hover,
+.about-card:hover,
+.location-card:hover,
+.hobby-card:hover,
+.craft-card:hover,
+.experience-card:hover,
+.education-card:hover,
+.certification-item:hover,
+.hero-stats div:hover {
+  border-color: rgba(225, 38, 47, 0.46);
+  background:
+    linear-gradient(145deg, rgba(225, 38, 47, 0.13), rgba(255, 209, 102, 0.045)),
+    rgba(7, 9, 13, 0.72);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.34),
+    var(--arc-glow);
+  transform: translateY(-4px);
+}
+
+.skills-intro:hover,
+.skill-chip:hover {
+  border-color: rgba(255, 209, 102, 0.45);
+  box-shadow: var(--arc-glow);
+  transform: translateY(-2px);
+}
+
+.skill-group-icon,
+.skill-icon-tile,
+.about-icon,
+.hobby-icon,
+.craft-icon,
+.education-icon,
+.experience-company-icon,
+.certification-item svg,
+.hero-stats svg {
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.skill-group:hover .skill-group-icon,
+.about-card:hover .about-icon,
+.hobby-card:hover .hobby-icon,
+.craft-card:hover .craft-icon,
+.education-card:hover .education-icon {
+  color: var(--red);
+  border-color: rgba(225, 38, 47, 0.48);
+  background: rgba(225, 38, 47, 0.1);
+  box-shadow: var(--arc-glow);
+  transform: translateY(-3px) scale(1.12);
+}
+
+.skill-chip:hover {
+  color: var(--text-strong);
+  background:
+    linear-gradient(135deg, rgba(225, 38, 47, 0.18), rgba(255, 209, 102, 0.08)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.skill-chip:hover .skill-icon-tile {
+  color: var(--red);
+  border-color: rgba(255, 209, 102, 0.55);
+  background: rgba(255, 209, 102, 0.1);
+  box-shadow:
+    0 0 0 5px rgba(225, 38, 47, 0.08),
+    var(--arc-glow);
+  transform: translateY(-4px) scale(1.45);
+}
+
 .skills-intro {
   display: flex;
   min-height: 100%;
@@ -1028,10 +1173,44 @@ header.fixed nav {
 .experience-head {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.35rem;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.78rem;
   align-items: start;
   min-height: 4.6rem;
+}
+
+.experience-company-icon {
+  display: grid;
+  width: 3.05rem;
+  height: 3.05rem;
+  flex: 0 0 auto;
+  place-items: center;
+  color: var(--gold);
+  border: 1px solid rgba(255, 209, 102, 0.26);
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 209, 102, 0.18), transparent 58%),
+    rgba(225, 38, 47, 0.08);
+  box-shadow: inset 0 0 28px rgba(225, 38, 47, 0.08);
+}
+
+.experience-card:hover .experience-company-icon {
+  color: var(--red);
+  border-color: rgba(225, 38, 47, 0.58);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 209, 102, 0.26), transparent 56%),
+    rgba(225, 38, 47, 0.13);
+  box-shadow:
+    0 0 0 6px rgba(225, 38, 47, 0.08),
+    var(--arc-glow);
+  transform: translateY(-6px) scale(1.24);
+}
+
+.experience-card:hover .experience-meta svg,
+.education-card:hover .certification-item svg,
+.hero-stats div:hover svg {
+  color: var(--red);
+  transform: scale(1.18);
 }
 
 .experience-head h3 {
@@ -1112,9 +1291,63 @@ header.fixed nav {
   line-height: 1.5;
 }
 
+.experience-impact {
+  position: relative;
+  display: grid;
+  gap: 0.48rem;
+  margin-top: auto;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 209, 102, 0.18);
+  border-radius: 1rem;
+  background:
+    linear-gradient(135deg, rgba(225, 38, 47, 0.1), rgba(255, 209, 102, 0.04)),
+    rgba(255, 255, 255, 0.03);
+}
+
+.experience-impact span {
+  color: var(--gold);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.experience-impact p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.32;
+}
+
+.experience-impact div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.experience-impact strong {
+  display: inline-flex;
+  min-height: 1.55rem;
+  align-items: center;
+  padding: 0 0.52rem;
+  color: var(--text);
+  border: 1px solid rgba(223, 231, 238, 0.16);
+  border-radius: 999px;
+  background: rgba(7, 9, 13, 0.42);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+.experience-card:hover .experience-impact {
+  border-color: rgba(255, 209, 102, 0.32);
+  box-shadow: inset 0 0 26px rgba(225, 38, 47, 0.08);
+}
+
 .experience-link {
   width: fit-content;
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .system-strip {
@@ -1578,9 +1811,15 @@ header.fixed nav {
   }
 
   .experience-head {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: 0.25rem;
     min-height: auto;
+  }
+
+  .experience-company-icon {
+    width: 2.35rem;
+    height: 2.35rem;
+    border-radius: 0.82rem;
   }
 
   .experience-head h3 {
@@ -1990,7 +2229,13 @@ header.fixed nav {
   }
 
   .experience-head {
-    gap: 0.25rem;
+    gap: 0.42rem;
+  }
+
+  .experience-company-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.7rem;
   }
 
   .experience-head h3 {
@@ -2027,6 +2272,224 @@ header.fixed nav {
   }
 }
 
+@media (max-width: 920px) {
+  .work-panel .panel-inner {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .work-panel .panel-heading {
+    flex: 0 0 auto;
+    margin-bottom: 0.65rem;
+  }
+
+  .experience-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.45rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .experience-tab {
+    display: grid;
+    min-width: 0;
+    min-height: 3.1rem;
+    align-content: center;
+    gap: 0.18rem;
+    padding: 0.48rem 0.58rem;
+    overflow: hidden;
+    color: var(--muted);
+    border: 1px solid rgba(223, 231, 238, 0.16);
+    border-radius: 0.95rem;
+    background: rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .experience-tab strong,
+  .experience-tab span {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .experience-tab strong {
+    color: var(--text-strong);
+    font-size: 0.74rem;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .experience-tab span {
+    color: var(--dim);
+    font-size: 0.62rem;
+    line-height: 1.16;
+  }
+
+  .experience-tab[aria-pressed="true"] {
+    color: var(--text-strong);
+    border-color: rgba(255, 209, 102, 0.5);
+    background:
+      linear-gradient(135deg, rgba(255, 209, 102, 0.14), rgba(214, 38, 43, 0.1)),
+      rgba(255, 255, 255, 0.045);
+    box-shadow: inset 0 0 22px rgba(255, 209, 102, 0.05);
+  }
+
+  .experience-grid {
+    display: block;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .experience-card {
+    display: none;
+    min-height: 0;
+  }
+
+  .experience-card.is-active {
+    display: flex;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    gap: 0.58rem;
+    padding: 0.82rem;
+    overflow: visible;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .experience-card.is-active .experience-head {
+    min-height: auto;
+  }
+
+  .experience-card.is-active .experience-head h3 {
+    font-size: 1.86rem;
+  }
+
+  .experience-card.is-active .experience-head p {
+    font-size: 0.86rem;
+  }
+
+  .experience-card.is-active .experience-meta {
+    gap: 0.38rem;
+  }
+
+  .experience-card.is-active .experience-meta span {
+    min-height: 1.78rem;
+    padding-inline: 0.58rem;
+    font-size: 0.68rem;
+  }
+
+  .experience-card.is-active .experience-lines {
+    gap: 0.42rem;
+  }
+
+  .experience-card.is-active .experience-lines li,
+  .experience-card.is-active .experience-lines li:nth-child(n + 2),
+  .experience-card.is-active .experience-lines li:nth-child(n + 3) {
+    display: block;
+    padding-left: 0.82rem;
+    overflow: visible;
+    font-size: 0.73rem;
+    line-height: 1.32;
+    -webkit-line-clamp: unset;
+  }
+
+  .experience-card.is-active .experience-note {
+    display: block;
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .experience-card.is-active .experience-impact {
+    display: none;
+  }
+
+  .experience-card.is-active .experience-link {
+    display: inline-flex;
+    min-height: 2.12rem;
+    margin-top: auto;
+    padding-inline: 0.85rem;
+    font-size: 0.62rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .work-panel .panel-heading {
+    margin-bottom: 0.38rem;
+  }
+
+  .experience-tabs {
+    gap: 0.34rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .experience-tab {
+    min-height: 2.55rem;
+    padding: 0.36rem 0.44rem;
+    border-radius: 0.82rem;
+  }
+
+  .experience-tab strong {
+    font-size: 0.66rem;
+  }
+
+  .experience-tab span {
+    font-size: 0.54rem;
+  }
+
+  .experience-card.is-active {
+    gap: 0.42rem;
+    padding: 0.68rem;
+    border-radius: 1.08rem;
+  }
+
+  .experience-card.is-active .experience-head h3 {
+    font-size: 1.58rem;
+  }
+
+  .experience-card.is-active .experience-head p {
+    margin-top: 0.18rem;
+    font-size: 0.78rem;
+  }
+
+  .experience-card.is-active .experience-meta {
+    gap: 0.3rem;
+  }
+
+  .experience-card.is-active .experience-meta span {
+    min-height: 1.5rem;
+    padding-inline: 0.46rem;
+    font-size: 0.56rem;
+  }
+
+  .experience-card.is-active .experience-lines {
+    gap: 0.34rem;
+  }
+
+  .experience-card.is-active .experience-lines li,
+  .experience-card.is-active .experience-lines li:nth-child(n + 2),
+  .experience-card.is-active .experience-lines li:nth-child(n + 3) {
+    font-size: 0.64rem;
+    line-height: 1.24;
+  }
+
+  .experience-card.is-active .experience-note {
+    font-size: 0.61rem;
+    line-height: 1.24;
+  }
+
+  .experience-card.is-active .experience-link {
+    min-height: 1.96rem;
+    padding-inline: 0.72rem;
+    font-size: 0.58rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2039,7 +2502,13 @@ header.fixed nav {
 
   .core-ring,
   .system-dot,
-  .portrait-orbit {
+  .portrait-orbit,
+  body::after,
+  .panel-heading h2,
+  .contact-title,
+  .hero-title,
+  .experience-head h3,
+  .brand-link {
     animation: none !important;
   }
 }

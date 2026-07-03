@@ -12,6 +12,11 @@ export type ExperienceEntry = {
   dates: string;
   where: string;
   lines: string[];
+  impact?: {
+    label: string;
+    text: string;
+    tags: string[];
+  };
   note?: string;
 };
 

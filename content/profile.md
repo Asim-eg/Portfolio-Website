@@ -1,10 +1,10 @@
 ---
 name: "Asim Altaf"
-tagline: "Backend Telecom Engineer"
-heroHeadline: "I build the systems mobile networks run on."
-heroSub: "Backend telecom systems in Go and C: 5G core, eSIM
-provisioning, subscriber data, SS7 signalling, and VoIP paths at
-production scale."
+tagline: "Backend Systems Engineer"
+heroHeadline: "I build backend systems that stay correct under load."
+heroSub: "Backend systems in C/C++ and Go: distributed services, event-driven
+telecom backends, real-time communication paths, and AI-assisted code
+validation workflows."
 location: "Islamabad, Pakistan (UTC+5)"
 availability: "Available immediately · remote or relocation"
 email: "asimaltaf.dev@gmail.com"
@@ -15,8 +15,8 @@ github: "https://github.com/AsimAltaf-eg"
 resume: "/Asim_Altaf_CV.pdf"
 portrait: "/media/asim-altaf.png"
 heroIntro: "ASIM ALTAF"
-heroKicker: "BACKEND TELECOM SYSTEMS FOR LIVE MOBILE NETWORKS"
-heroKickerHighlight: "LIVE MOBILE NETWORKS"
+heroKicker: "HIGH-PERFORMANCE BACKENDS FOR LIVE SYSTEMS"
+heroKickerHighlight: "LIVE SYSTEMS"
 nav:
   links:
     - label: "Skills"
@@ -55,6 +55,8 @@ sections:
   contact: "Say hello"
 marquee:
   row1:
+    - "C/C++"
+    - "LIBUV"
     - "5G CORE"
     - "SM-DP+"
     - "ES2+"
@@ -64,63 +66,83 @@ marquee:
     - "USSD"
     - "SIGTRAN"
     - "UDM/UDR"
-    - "HLR"
+    - "AI CODE REVIEW"
   row2:
     - "GO"
-    - "C/LIBUV"
+    - "DISTRIBUTED SYSTEMS"
     - "GRPC"
     - "KUBERNETES"
     - "SIP/RTP"
     - "10K CALLS/SEC"
     - "POSTGRESQL"
     - "REDIS"
-    - "ORACLE"
-    - "MTLS"
+    - "VALGRIND"
+    - "BENCHMARKING"
 stats:
   - value: "10K+"
     label: "calls/sec on Go SIP traffic"
   - value: "70%"
     label: "API latency cut on VoIP APIs"
-  - value: "3"
-    label: "carrier systems in production"
+  - value: "3+"
+    label: "years across backend and telecom systems"
 experience:
   - company: "Safarifone"
-    role: "Backend / Systems Engineer"
-    dates: "Nov 2025 – Present"
-    where: "Islamabad · mobile operator"
+    role: "Software Engineer · C/C++/Go"
+    dates: "2023 – Present"
+    where: "Islamabad, PK · telecom backends"
     lines:
-      - "I work across four production teams at a carrier with a
-        multi-million subscriber base — 5G core, eSIM, SS7, and the
-        subscriber platform."
-      - "Built our eSIM provisioning service in Go against a live
-        SM-DP+ (ES2+, GSMA SGP.02): the whole flow from 'customer buys
-        a plan' to 'profile installed on the phone', failure modes
-        included."
-      - "Implemented the 5G UDM/UDR in C with libuv — subscriber data,
-        SUPI/SUCI, authentication vectors. Moved it from threads to an
-        async event loop and watched the tail latency drop."
-      - "Wrote the SS7 MAP adapter and USSD connector so application
-        teams can speak JSON instead of learning TCAP."
+      - "Building high-performance telecom backends in C/C++ with libuv
+        event loops and Go services for UDM, eSIM, and subscriber platforms."
+      - "Implementing 5G Core UDM features aligned with 3GPP Release 19
+        requirements, including subscriber data and authentication flows."
+      - "Improving scalability and debuggability in 50K+ LOC codebases
+        with async components, profiling, and Valgrind."
+    impact:
+      label: "Production depth"
+      text: "Carrier-grade C/C++ and Go work across UDM, eSIM, subscriber platforms, and live telecom backends."
+      tags:
+        - "C/C++"
+        - "libuv"
+        - "5G UDM"
+        - "eSIM"
   - company: "ContactVA"
-    role: "Golang Developer · part-time remote contract"
-    dates: "Sep 2024 – Jul 2026"
-    where: "Remote · US enterprise clients"
+    role: "Go Developer"
+    dates: "2021 – 2022"
+    where: "Turkey · Remote"
     lines:
-      - "VoIP/SIP infrastructure in Go: a UDP signalling server that
-        held up at 10,000+ calls per second, with RTP relay and
-        OpenSIPS routing."
-      - "Cut API latency from about a second to ~300ms by reworking
-        OpenSIPS flows and the PostgreSQL/Redis layer."
-    note: "Ran alongside my full-time role from late 2025, with the
-      client's agreement, until the contract wrapped."
+      - "Built scalable real-time communication systems with a focus on
+        low-latency call processing and reliability."
+      - "Designed a Go UDP server for 10,000+ real-time calls per second
+        and tuned OpenSIPS call flows."
+      - "Reduced API latency by roughly 70%, from about 1000ms to ~300ms,
+        by optimizing PostgreSQL, Redis, and high-concurrency paths."
+    impact:
+      label: "Scale under traffic"
+      text: "Remote delivery on real-time communication systems: 10K+ calls/sec and roughly 70% API latency reduction."
+      tags:
+        - "10K+ calls/sec"
+        - "~70% latency cut"
+        - "OpenSIPS"
+        - "Redis"
   - company: "ZIXEL"
-    role: "Backend Developer"
-    dates: "Sep 2023 – Jun 2024"
-    where: "Islamabad"
+    role: "Software Engineer"
+    dates: "2023 – 2024"
+    where: "Islamabad, PK"
     lines:
-      - "First role out of university. Go microservices across five
-        products; caching and autoscaling that cut response times
-        roughly 20%; mentored two juniors."
+      - "Designed, optimized, and maintained scalable Go microservices
+        with emphasis on reliability, performance, and business impact."
+      - "Built and optimized 3+ services using autoscaling, concurrency,
+        and caching, improving response performance by roughly 20%."
+      - "Led code reviews and mentored developers to improve consistency
+        and maintainability across services."
+    impact:
+      label: "Foundation to ownership"
+      text: "First software role: built Go microservices, improved response time by ~20%, and grew into code-review ownership."
+      tags:
+        - "3+ services"
+        - "~20% faster"
+        - "Go"
+        - "Reviews"
 systems:
   - title: "eSIM lifecycle"
     desc: "Order to installed profile, against a live SM-DP+."
@@ -160,18 +182,21 @@ craft:
   - title: "Production debugging"
     desc: "Race conditions, correlation timeouts, binary framing edge cases. I write the postmortem people can read."
 stack:
-  - group: "Signalling & core"
-    items: "SS7 (MAP, TCAP, USSD, SIGTRAN) · HLR/HSS · 5G SBA (UDM/UDR)
-      · SIP/RTP"
-  - group: "eSIM / RSP"
-    items: "GSMA SGP.02 · ES2+ · SM-DP+ · mTLS"
-  - group: "Languages & infra"
-    items: "Go · C · C++ (libuv) · gRPC · Kubernetes · Docker · Oracle ·
-      PostgreSQL · Redis · Temporal.io"
+  - group: "Systems & languages"
+    items: "C/C++ · Go · libuv event loops · Distributed systems ·
+      Real-time systems · Memory management"
+  - group: "Telecom & data paths"
+    items: "5G UDM · eSIM / RSP · USM · CBS · BSS · SS7/MAP ·
+      SIP/RTP · HLR/HSS"
+  - group: "AI, infra & tooling"
+    items: "LLM code validation · Git/GitHub · Kubernetes · Docker ·
+      PostgreSQL · Redis · Jenkins · Valgrind · Benchmarking"
 howIWork: "I build backend systems where correctness, latency, and uptime
-  matter. My work sits close to live telecom traffic: eSIM provisioning,
-  subscriber data, 5G core services, SS7/MAP adapters, and VoIP paths
-  that have to keep working while customers are already using them."
+  matter. My work sits close to live traffic: C/C++ event loops, Go
+  services, telecom subscriber platforms, and real-time communication
+  paths that have to keep working while customers are already using them.
+  I use AI tools for acceleration, but I still validate generated code
+  for logic, memory, concurrency, and maintainability."
 hobbies:
   - name: "Systems thinking"
     line: "I break large telecom flows into state, failure modes, and
@@ -195,16 +220,16 @@ education:
   blurb: "FAST-NUCES is where I built the computer science base behind the telecom systems I work on now: operating systems, networking, databases, and the habit of debugging from first principles."
   certificationsTitle: "Certifications & focused learning"
   certifications:
-    - title: "GSMA eSIM RSP / SM-DP+"
-      issuer: "SGP.02, ES2+, callbacks, lifecycle state"
-      year: "Production track"
-    - title: "5G Core Subscriber Data"
-      issuer: "UDM/UDR, SUPI/SUCI, authentication vectors"
-      year: "3GPP focus"
-    - title: "Cloud-native Backend Systems"
-      issuer: "Kubernetes, Docker, gRPC, PostgreSQL, Redis"
-      year: "Applied stack"
+    - title: "5G Network Fundamentals"
+      issuer: "Core networks and subscriber systems"
+      year: "Completed"
+    - title: "Go Complete Course"
+      issuer: "Concurrency, services, and tooling"
+      year: "Completed"
+    - title: "AWS Cloud Practitioner"
+      issuer: "Cloud fundamentals and architecture"
+      year: "Ongoing"
 contactHeadline: "The inbox is open."
-contactSub: "Hiring for backend or telecom systems? I answer fast — I
-  deal with signalling failures daily."
+contactSub: "Hiring for backend, telecom, or systems work? I answer fast
+  and bring the debugging discipline required for production code."
 ---

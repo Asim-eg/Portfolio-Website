@@ -22,10 +22,10 @@ const icons: Record<Hobby["icon"], LucideIcon> = {
 };
 
 const facts = [
-  "5G core, eSIM, SS7/MAP, USSD, and subscriber data systems.",
-  "Go and C services built close to production traffic, not demo flows.",
-  "Comfortable with failure modes: callbacks, state machines, tail latency, traces.",
-  "Strongest where backend correctness and telecom domain detail meet.",
+  "Advanced C/C++, Go, distributed systems, and real-time backend work.",
+  "Production debugging with profiling, memory analysis, Valgrind, and traces.",
+  "Code review and maintainability improvements across large codebases.",
+  "AI-assisted coding used carefully: generated code is validated before it ships.",
 ];
 
 export function About() {
@@ -43,7 +43,7 @@ export function About() {
             </span>
             <div>
               <span className="about-card-label">Professional</span>
-              <h3>Backend systems that have to stay correct in production.</h3>
+              <h3>Backend systems that stay correct under pressure.</h3>
             </div>
           </div>
 
@@ -81,8 +81,8 @@ export function About() {
           </div>
 
           <p className="about-personal-copy">
-            Outside production systems, I keep a low-noise routine: trails, travel, and clear
-            notes after messy incidents.
+            Outside production systems, I keep a low-noise routine: trails, travel, clear notes
+            after messy incidents, and steady practice with AI-assisted engineering tools.
           </p>
 
           <div className="personal-rows">
@@ -105,7 +105,7 @@ export function About() {
 
           <div className="personal-signal">
             <Compass aria-hidden="true" size={18} />
-            <span>Deliberate, practical, and calm when systems are noisy.</span>
+            <span>Deliberate, practical, and calm when systems or generated code get noisy.</span>
           </div>
         </FadeIn>
       </div>
