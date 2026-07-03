@@ -24,6 +24,7 @@
   --metal-gradient: linear-gradient(180deg, #fff8d7 0%, #ffd166 34%, #ff8a1f 56%, #d6262b 100%);
   --arc-glow: 0 0 20px rgba(225, 38, 47, 0.35), 0 0 42px rgba(255, 209, 102, 0.16);
   --shadow: 0 24px 90px rgba(0, 0, 0, 0.46);
+  --label-font: "Rajdhani", "Kanit", Inter, sans-serif;
 }
 
 * {
@@ -249,25 +250,31 @@ button {
   gap: 0.55rem;
   padding: 0 1.15rem;
   border-radius: 999px;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.76rem;
+  font-family: var(--label-font);
+  font-size: 0.9rem;
+  font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(255, 209, 102, 0.16);
   transition:
     opacity 160ms ease,
     transform 160ms ease,
     background-color 160ms ease,
-    border-color 160ms ease;
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease;
 }
 
 .gradient-button {
   position: relative;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.38);
+  color: #fff5d7;
+  border: 1px solid rgba(255, 209, 102, 0.62);
   background:
-    linear-gradient(var(--bg), var(--bg)) padding-box,
+    linear-gradient(135deg, rgba(7, 9, 13, 0.96), rgba(34, 11, 10, 0.92)) padding-box,
     var(--gradient) border-box;
-  box-shadow: 0 0 24px rgba(214, 38, 43, 0.3);
+  box-shadow:
+    0 0 0 1px rgba(225, 38, 47, 0.12),
+    0 0 24px rgba(214, 38, 43, 0.3);
 }
 
 .gradient-button::before {
@@ -282,9 +289,11 @@ button {
 
 .ghost-button,
 .campus-link {
-  color: var(--text);
-  border: 1px solid var(--line-strong);
-  background: rgba(255, 255, 255, 0.035);
+  color: #f4e8d2;
+  border: 1px solid rgba(255, 209, 102, 0.28);
+  background:
+    linear-gradient(135deg, rgba(255, 209, 102, 0.055), rgba(225, 38, 47, 0.035)),
+    rgba(255, 255, 255, 0.03);
 }
 
 .gradient-button:hover,
@@ -292,7 +301,13 @@ button {
 .nav-action:hover,
 .campus-link:hover {
   transform: translateY(-1px);
-  opacity: 0.86;
+  color: #fff8d7;
+  opacity: 1;
+  border-color: rgba(255, 209, 102, 0.66);
+  box-shadow:
+    0 0 0 1px rgba(225, 38, 47, 0.18),
+    0 0 26px rgba(225, 38, 47, 0.24),
+    0 0 44px rgba(255, 209, 102, 0.08);
 }
 
 header.fixed nav {
@@ -308,14 +323,39 @@ header.fixed nav {
 
 .nav-action {
   min-height: 2.45rem;
-  color: var(--text);
-  border: 1px solid rgba(223, 231, 238, 0.18);
-  background: rgba(255, 255, 255, 0.045);
+  color: #f4e8d2;
+  border: 1px solid rgba(255, 209, 102, 0.2);
+  background:
+    linear-gradient(135deg, rgba(255, 209, 102, 0.045), rgba(225, 38, 47, 0.028)),
+    rgba(255, 255, 255, 0.035);
+}
+
+.nav-action svg,
+.ghost-button svg,
+.campus-link svg {
+  color: var(--gold);
 }
 
 .brand-link,
 .nav-link {
   letter-spacing: 0 !important;
+}
+
+.nav-link {
+  color: rgba(244, 232, 210, 0.78) !important;
+  font-family: var(--label-font) !important;
+  font-size: 0.9rem !important;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 0 14px rgba(255, 209, 102, 0.08);
+}
+
+.nav-link:hover {
+  color: #fff5d7 !important;
+  opacity: 1 !important;
+  text-shadow:
+    0 0 18px rgba(225, 38, 47, 0.28),
+    0 0 24px rgba(255, 209, 102, 0.16);
 }
 
 .brand-link {
@@ -348,7 +388,10 @@ header.fixed nav {
 }
 
 .nav-link[aria-current="page"] {
-  text-shadow: 0 0 18px rgba(255, 209, 102, 0.34);
+  color: #fff5d7 !important;
+  text-shadow:
+    0 0 18px rgba(225, 38, 47, 0.34),
+    0 0 26px rgba(255, 209, 102, 0.2);
 }
 
 .nav-action-phone {
@@ -370,11 +413,13 @@ header.fixed nav {
 }
 
 .phone-label {
+  font-family: var(--label-font);
   font-weight: 800;
   white-space: nowrap;
 }
 
 .menu-link {
+  font-family: var(--label-font);
   opacity: 0;
   transform: translateY(20px);
   animation: menu-in 0.42s ease-out forwards;
@@ -1175,9 +1220,9 @@ header.fixed nav {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  gap: 0.95rem;
-  min-height: 32rem;
-  padding: 1.25rem;
+  gap: 0.62rem;
+  min-height: 29rem;
+  padding: 1rem;
   overflow: hidden;
 }
 
@@ -1196,15 +1241,15 @@ header.fixed nav {
   position: relative;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: 0.78rem;
+  gap: 0.62rem;
   align-items: start;
-  min-height: 4.6rem;
+  min-height: 3.45rem;
 }
 
 .experience-company-icon {
   display: grid;
-  width: 3.05rem;
-  height: 3.05rem;
+  width: 2.8rem;
+  height: 2.8rem;
   flex: 0 0 auto;
   place-items: center;
   color: var(--gold);
@@ -1240,7 +1285,7 @@ header.fixed nav {
   color: transparent;
   background: var(--metal-gradient);
   background-clip: text;
-  font-size: 2.05rem;
+  font-size: 1.82rem;
   font-weight: 900;
   line-height: 0.94;
   text-transform: uppercase;
@@ -1249,29 +1294,29 @@ header.fixed nav {
 }
 
 .experience-head p {
-  margin: 0.35rem 0 0;
+  margin: 0.2rem 0 0;
   color: var(--text);
-  font-size: 1.03rem;
+  font-size: 0.94rem;
 }
 
 .experience-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.42rem;
 }
 
 .experience-meta span {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  min-height: 2.15rem;
-  padding: 0 0.75rem;
+  min-height: 1.82rem;
+  padding: 0 0.58rem;
   color: var(--text);
   border: 1px solid rgba(223, 231, 238, 0.16);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.04);
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.82rem;
+  font-size: 0.7rem;
 }
 
 .experience-meta svg {
@@ -1280,7 +1325,7 @@ header.fixed nav {
 
 .experience-lines {
   display: grid;
-  gap: 0.7rem;
+  gap: 0.42rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1288,18 +1333,18 @@ header.fixed nav {
 
 .experience-lines li {
   position: relative;
-  padding-left: 1rem;
+  padding-left: 0.82rem;
   color: var(--text);
-  font-size: 0.88rem;
-  line-height: 1.42;
+  font-size: 0.78rem;
+  line-height: 1.3;
 }
 
 .experience-lines li::before {
   position: absolute;
   top: 0.7em;
   left: 0;
-  width: 0.38rem;
-  height: 0.38rem;
+  width: 0.34rem;
+  height: 0.34rem;
   content: "";
   border-radius: 999px;
   background: var(--gradient);
@@ -1316,9 +1361,9 @@ header.fixed nav {
 .experience-impact {
   position: relative;
   display: grid;
-  gap: 0.48rem;
+  gap: 0.32rem;
   margin-top: auto;
-  padding: 0.8rem;
+  padding: 0.62rem;
   border: 1px solid rgba(255, 209, 102, 0.18);
   border-radius: 1rem;
   background:
@@ -1329,7 +1374,7 @@ header.fixed nav {
 .experience-impact span {
   color: var(--gold);
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 800;
   line-height: 1;
   text-transform: uppercase;
@@ -1338,27 +1383,27 @@ header.fixed nav {
 .experience-impact p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.32;
+  font-size: 0.69rem;
+  line-height: 1.2;
 }
 
 .experience-impact div {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  gap: 0.28rem;
 }
 
 .experience-impact strong {
   display: inline-flex;
-  min-height: 1.55rem;
+  min-height: 1.28rem;
   align-items: center;
-  padding: 0 0.52rem;
+  padding: 0 0.42rem;
   color: var(--text);
   border: 1px solid rgba(223, 231, 238, 0.16);
   border-radius: 999px;
   background: rgba(7, 9, 13, 0.42);
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 600;
 }
 
@@ -1369,7 +1414,10 @@ header.fixed nav {
 
 .experience-link {
   width: fit-content;
-  margin-top: 0;
+  min-height: 2.35rem;
+  margin-top: 0.04rem;
+  padding-inline: 0.95rem;
+  font-size: 0.84rem;
 }
 
 .system-strip {
