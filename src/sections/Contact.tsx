@@ -6,9 +6,7 @@ import { profile, ui } from "../lib/content";
 export function Contact() {
   return (
     <Panel className="contact-panel" direction="up" id="contact">
-      <FadeIn>
-        <h2 className="contact-title">{profile.sections.contact}</h2>
-      </FadeIn>
+      <h2 className="contact-title">{profile.sections.contact}</h2>
 
       <FadeIn className="contact-copy" delay={0.12}>
         <p>{profile.contactSub}</p>

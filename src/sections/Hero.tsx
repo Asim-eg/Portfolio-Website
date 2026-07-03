@@ -14,12 +14,10 @@ export function Hero() {
 
       <div className="hero-grid">
         <div className="hero-copy">
-          <FadeIn delay={0.08} y={24}>
-            <h1 className="hero-title" aria-label={profile.heroIntro}>
-              <span>{firstName}</span>
-              <span>{lastName}</span>
-            </h1>
-          </FadeIn>
+          <h1 className="hero-title" aria-label={profile.heroIntro}>
+            <span>{firstName}</span>
+            <span>{lastName}</span>
+          </h1>
 
           <FadeIn delay={0.18} y={24}>
             <p className="hero-kicker">

@@ -54,7 +54,7 @@ export function Nav({ activeHref, onNavigate }: NavProps) {
         <nav className="flex items-center justify-between px-5 pt-5 text-[#D7E2EA] md:px-10 md:pt-8">
           <a
             aria-current={activeHref === "#top" ? "page" : undefined}
-            className="brand-link font-mono text-sm uppercase transition-opacity hover:opacity-70"
+            className="brand-link font-mono text-sm uppercase"
             href="#top"
             onClick={handleNav("#top")}
           >
