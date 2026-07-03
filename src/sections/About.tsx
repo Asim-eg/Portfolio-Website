@@ -2,7 +2,6 @@ import {
   BrainCircuit,
   BriefcaseBusiness,
   CheckCircle2,
-  Compass,
   MapPin,
   Mountain,
   Plane,
@@ -22,10 +21,10 @@ const icons: Record<Hobby["icon"], LucideIcon> = {
 };
 
 const facts = [
-  "Advanced C/C++, Go, distributed systems, and real-time backend work.",
-  "Production debugging with profiling, memory analysis, Valgrind, and traces.",
-  "Code review and maintainability improvements across large codebases.",
-  "AI-assisted coding used carefully: generated code is validated before it ships.",
+  "Advanced C/C++, Go, distributed and real-time backend systems.",
+  "Production debugging with profiling, Valgrind, memory analysis, and traces.",
+  "Code review and maintainability across large C/C++ and Go codebases.",
+  "AI-assisted coding with validation for logic, memory, and concurrency.",
 ];
 
 export function About() {
@@ -68,7 +67,7 @@ export function About() {
             </span>
             <div>
               <span className="about-card-label">Personal</span>
-              <h3>Calm under pressure, direct in communication, practical by default.</h3>
+              <h3>Calm, direct, practical by default.</h3>
             </div>
           </div>
 
@@ -81,8 +80,8 @@ export function About() {
           </div>
 
           <p className="about-personal-copy">
-            Outside production systems, I keep a low-noise routine: trails, travel, clear notes
-            after messy incidents, and steady practice with AI-assisted engineering tools.
+            Outside production systems: trails, travel, clear notes after messy incidents, and
+            steady practice with AI-assisted engineering tools.
           </p>
 
           <div className="personal-rows">
@@ -101,11 +100,6 @@ export function About() {
                 </div>
               );
             })}
-          </div>
-
-          <div className="personal-signal">
-            <Compass aria-hidden="true" size={18} />
-            <span>Deliberate, practical, and calm when systems or generated code get noisy.</span>
           </div>
         </FadeIn>
       </div>

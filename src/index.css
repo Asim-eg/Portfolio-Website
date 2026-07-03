@@ -880,16 +880,24 @@ header.fixed nav {
   gap: 1.1rem;
 }
 
+.about-panel .panel-heading {
+  margin-bottom: 1.4rem;
+}
+
+.about-panel .panel-heading h2 {
+  font-size: 5.45rem;
+}
+
 .about-card {
   display: flex;
   min-height: 100%;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.35rem;
+  padding: 1.12rem;
 }
 
 .about-card-personal {
-  gap: 1rem;
+  gap: 0.8rem;
   background:
     linear-gradient(135deg, rgba(255, 209, 102, 0.075), transparent 36%),
     linear-gradient(145deg, rgba(214, 38, 43, 0.1), rgba(255, 255, 255, 0.025)),
@@ -924,31 +932,31 @@ header.fixed nav {
 }
 
 .about-card h3 {
-  max-width: 18ch;
+  max-width: 22ch;
   margin: 0.28rem 0 0;
   color: var(--text-strong);
-  font-size: 1.95rem;
+  font-size: 1.62rem;
   font-weight: 900;
   line-height: 1.02;
   text-transform: uppercase;
 }
 
 .about-card-personal h3 {
-  max-width: 21ch;
-  font-size: 1.62rem;
+  max-width: 24ch;
+  font-size: 1.34rem;
 }
 
 .about-card p {
-  margin: 1.15rem 0 0;
+  margin: 0.85rem 0 0;
   color: var(--text);
-  font-size: 1.08rem;
-  line-height: 1.58;
+  font-size: 0.98rem;
+  line-height: 1.45;
 }
 
 .about-proof-list {
   display: grid;
-  gap: 0.75rem;
-  margin: 1.2rem 0 1.35rem;
+  gap: 0.5rem;
+  margin: 0.85rem 0 1rem;
   padding: 0;
   list-style: none;
 }
@@ -956,11 +964,11 @@ header.fixed nav {
 .about-proof-list li {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0.7rem;
+  gap: 0.58rem;
   align-items: start;
   color: var(--muted);
-  font-size: 0.98rem;
-  line-height: 1.42;
+  font-size: 0.9rem;
+  line-height: 1.3;
 }
 
 .about-proof-list svg {
@@ -975,17 +983,17 @@ header.fixed nav {
 .personal-rows {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.7rem;
+  gap: 0.58rem;
   width: 100%;
-  margin-top: 0.8rem;
+  margin-top: 0.58rem;
 }
 
 .location-card,
 .hobby-card {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   align-items: flex-start;
-  padding: 1rem;
+  padding: 0.78rem;
 }
 
 .location-card {
@@ -999,18 +1007,23 @@ header.fixed nav {
 .about-personal-copy {
   margin: 0 !important;
   color: var(--muted) !important;
-  font-size: 1rem !important;
-  line-height: 1.48 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.36 !important;
 }
 
 .hobby-card {
-  align-items: center;
-  padding: 0.78rem;
+  align-items: flex-start;
+  min-height: 4.85rem;
+  padding: 0.6rem;
+}
+
+.hobby-card > div {
+  min-width: 0;
 }
 
 .hobby-icon {
-  width: 2.35rem;
-  height: 2.35rem;
+  width: 2rem;
+  height: 2rem;
   flex: 0 0 auto;
   border-radius: 0.85rem;
 }
@@ -1023,7 +1036,7 @@ header.fixed nav {
 .hobby-card strong {
   display: block;
   color: var(--text-strong);
-  font-size: 1rem;
+  font-size: 0.92rem;
 }
 
 .location-card span,
@@ -1036,6 +1049,15 @@ header.fixed nav {
   line-height: 1.45;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.hobby-card span {
+  display: block;
+  overflow: visible;
+  font-size: 0.74rem;
+  line-height: 1.25;
+  -webkit-box-orient: initial;
+  -webkit-line-clamp: unset;
 }
 
 .personal-signal {

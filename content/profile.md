@@ -192,24 +192,19 @@ stack:
     items: "LLM code validation · Git/GitHub · Kubernetes · Docker ·
       PostgreSQL · Redis · Jenkins · Valgrind · Benchmarking"
 howIWork: "I build backend systems where correctness, latency, and uptime
-  matter. My work sits close to live traffic: C/C++ event loops, Go
-  services, telecom subscriber platforms, and real-time communication
-  paths that have to keep working while customers are already using them.
-  I use AI tools for acceleration, but I still validate generated code
-  for logic, memory, concurrency, and maintainability."
+  matter: C/C++ event loops, Go services, telecom subscriber platforms,
+  real-time communication paths, and AI-assisted code validation before
+  generated code gets near production."
 hobbies:
   - name: "Systems thinking"
-    line: "I break large telecom flows into state, failure modes, and
-      observable boundaries."
+    line: "Breaking telecom flows into state, failure modes, and clean
+      boundaries."
   - name: "Hiking"
-    line: "Islamabad sits against the Margalla Hills. I walk the trails
-      to think through designs."
+    line: "Margalla Hills walks help me think through system designs."
   - name: "Traveling"
-    line: "Partly why I work on eSIMs — I've been the person landing
-      without connectivity."
+    line: "I notice connectivity gaps because I travel and work on eSIMs."
   - name: "Incident calm"
-    line: "I prefer clear traces, small fixes, and postmortems people can
-      actually use."
+    line: "Clear traces, small fixes, and postmortems people can use."
 education:
   degree: "BS Computer Science"
   school: "National University of Computer & Emerging Sciences
