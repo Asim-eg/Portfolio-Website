@@ -39,7 +39,7 @@ export function Hero() {
 
           <FadeIn className="hero-actions" delay={0.38} y={24}>
             <GradientButton href="#contact">{profile.actions.contact}</GradientButton>
-            <GhostButton href={profile.resume}>
+            <GhostButton aria-label="Open Asim's resume" href={profile.resume} rel="noreferrer" target="_blank" title="Open Asim's resume">
               <Download aria-hidden="true" size={16} />
               {profile.actions.downloadResume}
             </GhostButton>

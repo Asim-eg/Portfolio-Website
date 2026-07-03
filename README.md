@@ -30,7 +30,8 @@ Key content fields include:
 ## Assets
 
 - Portrait: `public/media/asim-altaf.png`
-- Resume PDF: `public/Asim_Altaf_CV.pdf`
+- Resume viewer: `public/resume/index.html`
+- Resume PDF: `public/Asim_Altaf_Resume.pdf`
 
 The university campus CTA links to the official FAST-NUCES Islamabad site.
 
@@ -39,7 +40,7 @@ The university campus CTA links to the official FAST-NUCES Islamabad site.
 Replace:
 
 ```text
-public/Asim_Altaf_CV.pdf
+public/Asim_Altaf_Resume.pdf
 ```
 
 Keep the same filename unless you also update `resume` in `content/profile.md`.
@@ -84,7 +85,8 @@ In Vercel, set the project **Root Directory** to the folder that contains `packa
 After deployment, verify:
 
 - Site: `/`
-- Resume PDF: `/Asim_Altaf_CV.pdf`
+- Resume viewer: `/resume/`
+- Resume PDF: `/Asim_Altaf_Resume.pdf`
 
 ## Deploy on GitHub Pages
 
@@ -100,4 +102,4 @@ npm run build
 
 ## Deviations
 
-`public/Asim_Altaf_CV.pdf` was generated from the supplied DOCX with Python document tooling because no LibreOffice, Pandoc, or unoconv binary was available in this environment.
+`public/Asim_Altaf_Resume.pdf` is generated from the supplied resume PDF and carries explicit PDF metadata for search/share context. Resume buttons open `public/resume/index.html` so the browser tab title is controlled by the site while still embedding the same PDF.

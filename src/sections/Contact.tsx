@@ -34,7 +34,7 @@ export function Contact() {
           <Github aria-hidden="true" size={17} />
           {ui.contact.buttons[2].label}
         </GhostButton>
-        <GhostButton href={profile.resume}>
+        <GhostButton aria-label="Open Asim's resume" href={profile.resume} rel="noreferrer" target="_blank" title="Open Asim's resume">
           <FileText aria-hidden="true" size={17} />
           {ui.contact.buttons[3].label}
         </GhostButton>

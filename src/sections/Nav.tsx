@@ -85,8 +85,8 @@ export function Nav({ activeHref, onNavigate }: NavProps) {
                   className={`nav-action ${action.kind === "phone" ? "nav-action-phone" : ""}`}
                   href={action.href}
                   key={action.kind}
-                  rel={action.kind === "resume" || action.kind === "phone" ? undefined : "noreferrer"}
-                  target={action.kind === "resume" || action.kind === "phone" ? undefined : "_blank"}
+                  rel={action.kind === "phone" ? undefined : "noreferrer"}
+                  target={action.kind === "phone" ? undefined : "_blank"}
                   title={action.label}
                 >
                   <Icon aria-hidden="true" size={18} />
@@ -118,7 +118,10 @@ export function Nav({ activeHref, onNavigate }: NavProps) {
                 href={link.href}
                 key={link.href}
                 onClick={handleNav(link.href)}
+                rel={isAction(link) && link.kind !== "phone" ? "noreferrer" : undefined}
                 style={{ "--menu-stagger": index } as CSSProperties}
+                target={isAction(link) && link.kind !== "phone" ? "_blank" : undefined}
+                title={isAction(link) && link.kind === "resume" ? "Open Asim's resume" : link.label}
               >
                 {isAction(link) && link.kind === "phone" ? <span className="menu-phone-flag" aria-hidden="true">🇵🇰</span> : null}
                 {link.label}

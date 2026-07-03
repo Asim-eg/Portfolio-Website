@@ -6,6 +6,19 @@
   "outputDirectory": "dist",
   "headers": [
     {
+      "source": "/Asim_Altaf_Resume.pdf",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/pdf"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline; filename=\"Asim_Altaf_Resume.pdf\""
+        }
+      ]
+    },
+    {
       "source": "/Asim_Altaf_CV.pdf",
       "headers": [
         {
@@ -14,7 +27,7 @@
         },
         {
           "key": "Content-Disposition",
-          "value": "inline; filename=\"Asim_Altaf_CV.pdf\""
+          "value": "inline; filename=\"Asim_Altaf_Resume.pdf\""
         }
       ]
     }
