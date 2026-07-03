@@ -197,14 +197,13 @@ howIWork: "I build backend systems where correctness, latency, and uptime
   generated code gets near production."
 hobbies:
   - name: "Systems thinking"
-    line: "Breaking telecom flows into state, failure modes, and clean
-      boundaries."
+    line: "I map states, edge cases, and failure modes."
   - name: "Hiking"
-    line: "Margalla Hills walks help me think through system designs."
+    line: "Margalla hikes keep me clear-headed."
   - name: "Traveling"
-    line: "I notice connectivity gaps because I travel and work on eSIMs."
+    line: "Travel keeps me close to real eSIM problems."
   - name: "Incident calm"
-    line: "Clear traces, small fixes, and postmortems people can use."
+    line: "Traces first, small fixes, usable postmortems."
 education:
   degree: "BS Computer Science"
   school: "National University of Computer & Emerging Sciences

@@ -211,11 +211,7 @@ button {
   font-size: 6rem;
 }
 
-.panel-heading h2,
-.contact-title,
-.hero-title,
-.experience-head h3,
-.brand-link {
+.experience-head h3 {
   background-size: 175% auto;
   animation: text-shine 7s ease-in-out infinite;
 }
@@ -1058,7 +1054,7 @@ header.fixed nav {
 
 .hobby-card {
   align-items: flex-start;
-  min-height: 4.85rem;
+  min-height: 4.45rem;
   padding: 0.6rem;
 }
 
@@ -1099,8 +1095,8 @@ header.fixed nav {
 .hobby-card span {
   display: block;
   overflow: visible;
-  font-size: 0.74rem;
-  line-height: 1.25;
+  font-size: 0.76rem;
+  line-height: 1.28;
   -webkit-box-orient: initial;
   -webkit-line-clamp: unset;
 }
@@ -2058,6 +2054,143 @@ header.fixed nav {
     font-size: 2.65rem;
   }
 
+  .about-panel .panel-heading {
+    margin-bottom: 0.48rem;
+  }
+
+  .about-panel .panel-heading h2 {
+    font-size: 3.05rem;
+    line-height: 0.9;
+  }
+
+  .about-grid {
+    gap: 0.46rem;
+  }
+
+  .about-card {
+    padding: 0.56rem;
+  }
+
+  .about-card-top {
+    gap: 0.5rem;
+  }
+
+  .about-icon {
+    width: 2.05rem;
+    height: 2.05rem;
+    border-radius: 0.68rem;
+  }
+
+  .about-icon svg {
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+
+  .about-card-label {
+    font-size: 0.56rem;
+  }
+
+  .about-card h3 {
+    font-size: 0.78rem;
+    line-height: 1.04;
+  }
+
+  .about-card p {
+    margin-top: 0.38rem;
+    font-size: 0.62rem;
+    line-height: 1.16;
+  }
+
+  .about-proof-list {
+    gap: 0.24rem;
+    margin-top: 0.42rem;
+  }
+
+  .about-proof-list li {
+    gap: 0.34rem;
+    font-size: 0.58rem;
+    line-height: 1.12;
+  }
+
+  .about-proof-list svg {
+    width: 0.72rem;
+    height: 0.72rem;
+  }
+
+  .location-card,
+  .hobby-card {
+    gap: 0.36rem;
+    padding: 0.38rem;
+  }
+
+  .location-card svg {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  .location-card strong,
+  .hobby-card strong {
+    font-size: 0.62rem;
+    line-height: 1.08;
+  }
+
+  .location-card span {
+    font-size: 0.56rem;
+    line-height: 1.08;
+  }
+
+  .personal-rows {
+    gap: 0.38rem;
+    margin-top: 0.38rem;
+  }
+
+  .hobby-card {
+    min-height: 4.05rem;
+  }
+
+  .hobby-icon {
+    width: 1.32rem;
+    height: 1.32rem;
+    border-radius: 0.5rem;
+  }
+
+  .hobby-icon svg {
+    width: 0.78rem;
+    height: 0.78rem;
+  }
+
+  .hobby-card span {
+    margin-top: 0.12rem;
+    font-size: 0.54rem;
+    line-height: 1.28;
+  }
+
+  @media (max-width: 380px) {
+    .about-panel .panel-heading h2 {
+      font-size: 2.82rem;
+    }
+
+    .personal-rows {
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
+    }
+
+    .hobby-card {
+      min-height: 0;
+      align-items: center;
+      padding: 0.38rem 0.42rem;
+    }
+
+    .hobby-card strong {
+      font-size: 0.68rem;
+    }
+
+    .hobby-card span {
+      font-size: 0.6rem;
+      line-height: 1.34;
+    }
+  }
+
   .hero-kicker {
     font-size: 1.12rem;
   }
@@ -2176,19 +2309,15 @@ header.fixed nav {
     gap: 0.55rem;
   }
 
-  .about-card-personal .personal-rows .hobby-card:nth-child(n + 3) {
-    display: none;
-  }
-
   .hobby-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
     border-radius: 0.72rem;
   }
 
   .hobby-icon svg {
-    width: 1.05rem;
-    height: 1.05rem;
+    width: 0.95rem;
+    height: 0.95rem;
   }
 
   .contact-actions .ghost-button {
