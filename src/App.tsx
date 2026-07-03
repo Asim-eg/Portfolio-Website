@@ -165,7 +165,7 @@ export default function App() {
 
       const deltaX = touch.clientX - start.x;
       const deltaY = touch.clientY - start.y;
-      const primaryDelta = Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : -deltaY;
+      const primaryDelta = Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY;
 
       if (Math.abs(primaryDelta) < 56) {
         return;

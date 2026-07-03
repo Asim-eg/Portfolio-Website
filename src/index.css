@@ -2101,19 +2101,7 @@ header.fixed nav {
   }
 
   .section-controls {
-    top: 50%;
-    right: 0.35rem;
-    bottom: auto;
-    left: auto;
-    display: grid;
-    align-items: center;
-    gap: 0.42rem;
-    padding: 0.38rem;
-    transform: translateY(-50%);
-  }
-
-  .section-dots {
-    display: grid;
+    display: none;
   }
 }
 
