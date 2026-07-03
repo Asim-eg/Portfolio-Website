@@ -88,7 +88,7 @@ stats:
 experience:
   - company: "Safarifone"
     role: "Software Engineer · C/C++/Go"
-    dates: "2023 – Present"
+    dates: "Nov 2025 – Present"
     where: "Islamabad, PK · telecom backends"
     lines:
       - "Building high-performance telecom backends in C/C++ with libuv
@@ -107,7 +107,7 @@ experience:
         - "eSIM"
   - company: "ContactVA"
     role: "Go Developer"
-    dates: "2021 – 2022"
+    dates: "Sep 2024 – Jul 2026"
     where: "Turkey · Remote"
     lines:
       - "Built scalable real-time communication systems with a focus on
@@ -126,7 +126,7 @@ experience:
         - "Redis"
   - company: "ZIXEL"
     role: "Software Engineer"
-    dates: "2023 – 2024"
+    dates: "Sep 2023 – Jun 2024"
     where: "Islamabad, PK"
     lines:
       - "Designed, optimized, and maintained scalable Go microservices
@@ -208,7 +208,7 @@ education:
   degree: "BS Computer Science"
   school: "National University of Computer & Emerging Sciences
     (FAST-NUCES)"
-  years: "2019 – 2023"
+  years: "Aug 2019 – Aug 2023"
   campusLabel: "FAST-NUCES Islamabad Campus"
   campusUrl: "https://isb.nu.edu.pk/NEW/this.html"
   blurb: "FAST-NUCES is where I built the computer science base behind the telecom systems I work on now: operating systems, networking, databases, and the habit of debugging from first principles."
