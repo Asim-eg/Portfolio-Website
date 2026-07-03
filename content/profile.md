@@ -2,8 +2,9 @@
 name: "Asim Altaf"
 tagline: "Backend Telecom Engineer"
 heroHeadline: "I build the systems mobile networks run on."
-heroSub: "5G core, eSIM provisioning, SS7 signalling — in production at
-multi-million subscriber scale. Go and C are my daily languages."
+heroSub: "Backend telecom systems in Go and C: 5G core, eSIM
+provisioning, subscriber data, SS7 signalling, and VoIP paths at
+production scale."
 location: "Islamabad, Pakistan (UTC+5)"
 availability: "Available immediately · remote or relocation"
 email: "asimaltaf.dev@gmail.com"
@@ -13,9 +14,9 @@ linkedin: "https://linkedin.com/in/asim-altaf"
 github: "https://github.com/AsimAltaf-eg"
 resume: "/Asim_Altaf_CV.pdf"
 portrait: "/media/asim-altaf.png"
-heroIntro: "HI, I'M ASIM"
-heroKicker: "RELIABLE MOBILE NETWORK SYSTEMS"
-heroKickerHighlight: "MOBILE NETWORK"
+heroIntro: "ASIM ALTAF"
+heroKicker: "BACKEND TELECOM SYSTEMS FOR LIVE MOBILE NETWORKS"
+heroKickerHighlight: "LIVE MOBILE NETWORKS"
 nav:
   links:
     - label: "Skills"
@@ -39,7 +40,7 @@ nav:
       kind: "whatsapp"
     - label: "Resume"
       kind: "resume"
-    - label: "Number"
+    - label: "+92-312-6358833"
       kind: "phone"
 actions:
   contact: "Contact Me"
@@ -192,6 +193,17 @@ education:
   campusLabel: "FAST-NUCES Islamabad Campus"
   campusUrl: "https://isb.nu.edu.pk/"
   blurb: "FAST-NUCES is where I built the computer science base behind the telecom systems I work on now: operating systems, networking, databases, and the habit of debugging from first principles."
+  certificationsTitle: "Certifications & focused learning"
+  certifications:
+    - title: "GSMA eSIM RSP / SM-DP+"
+      issuer: "SGP.02, ES2+, callbacks, lifecycle state"
+      year: "Production track"
+    - title: "5G Core Subscriber Data"
+      issuer: "UDM/UDR, SUPI/SUCI, authentication vectors"
+      year: "3GPP focus"
+    - title: "Cloud-native Backend Systems"
+      issuer: "Kubernetes, Docker, gRPC, PostgreSQL, Redis"
+      year: "Applied stack"
 contactHeadline: "The inbox is open."
 contactSub: "Hiring for backend or telecom systems? I answer fast — I
   deal with signalling failures daily."

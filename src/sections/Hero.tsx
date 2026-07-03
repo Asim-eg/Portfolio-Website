@@ -5,6 +5,9 @@ import { Panel } from "../components/Panel";
 import { profile } from "../lib/content";
 
 export function Hero() {
+  const [firstName, ...restName] = profile.heroIntro.split(" ");
+  const lastName = restName.join(" ");
+
   return (
     <Panel className="hero-panel" direction="up" id="top">
       <CoreRing />
@@ -12,7 +15,10 @@ export function Hero() {
       <div className="hero-grid">
         <div className="hero-copy">
           <FadeIn delay={0.08} y={24}>
-            <h1 className="hero-title">{profile.heroIntro}</h1>
+            <h1 className="hero-title" aria-label={profile.heroIntro}>
+              <span>{firstName}</span>
+              <span>{lastName}</span>
+            </h1>
           </FadeIn>
 
           <FadeIn delay={0.18} y={24}>

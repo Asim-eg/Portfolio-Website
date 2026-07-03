@@ -12,6 +12,7 @@ import {
   RadioTower,
   Router,
   Server,
+  ServerCog,
   ShieldCheck,
   SmartphoneNfc,
   type LucideIcon,
@@ -48,6 +49,12 @@ const iconByNeedle: Array<[string, LucideIcon]> = [
   ["TEMPORAL", Fingerprint],
 ];
 
+const groupIcons: Record<string, LucideIcon> = {
+  "Signalling & Core": RadioTower,
+  "eSIM / RSP": SmartphoneNfc,
+  "Languages & Infra": ServerCog,
+};
+
 function iconFor(label: string) {
   const normalized = label.toUpperCase();
   return iconByNeedle.find(([needle]) => normalized.includes(needle))?.[1] ?? RadioTower;
@@ -64,7 +71,6 @@ export function Skills() {
   return (
     <Panel className="skills-panel" direction="right" id="skills">
       <div className="panel-heading">
-        <span>02</span>
         <h2>{profile.sections.skills}</h2>
       </div>
 
@@ -82,23 +88,34 @@ export function Skills() {
         </div>
 
         <div className="skill-groups">
-          {profile.stack.map((group) => (
-            <article className="skill-group" key={group.group}>
-              <h3>{group.group}</h3>
-              <div>
-                {splitItems(group.items).map((item) => {
-                  const Icon = iconFor(item);
+          {profile.stack.map((group) => {
+            const GroupIcon = groupIcons[group.group] ?? RadioTower;
 
-                  return (
-                    <span className="skill-chip" key={item}>
-                      <Icon aria-hidden="true" size={18} />
-                      {item}
-                    </span>
-                  );
-                })}
-              </div>
-            </article>
-          ))}
+            return (
+              <article className="skill-group" key={group.group}>
+                <h3>
+                  <span className="skill-group-icon">
+                    <GroupIcon aria-hidden="true" size={22} />
+                  </span>
+                  {group.group}
+                </h3>
+                <div>
+                  {splitItems(group.items).map((item) => {
+                    const Icon = iconFor(item);
+
+                    return (
+                      <span className="skill-chip" key={item}>
+                        <span className="skill-icon-tile">
+                          <Icon aria-hidden="true" size={21} />
+                        </span>
+                        <span>{item}</span>
+                      </span>
+                    );
+                  })}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </Panel>

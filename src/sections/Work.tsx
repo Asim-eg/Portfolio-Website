@@ -1,16 +1,20 @@
+import { useState } from "react";
 import { CalendarDays, ExternalLink, MapPin } from "lucide-react";
 import { FadeIn, GhostButton } from "../components/Motion";
 import { Panel } from "../components/Panel";
-import { SystemStrip } from "../components/SystemStrip";
 import { profile, type ExperienceEntry } from "../lib/content";
 
-function WorkCard({ entry, index }: { entry: ExperienceEntry; index: number }) {
-  const nodes = index === 0 ? profile.systems[0]?.nodes ?? [] : [];
-
+function WorkCard({ entry, index, isActive }: { entry: ExperienceEntry; index: number; isActive: boolean }) {
   return (
-    <FadeIn className={`experience-card ${index === 0 ? "experience-card-featured" : ""}`} delay={index * 0.08} y={28}>
+    <FadeIn
+      aria-labelledby={`experience-tab-${index}`}
+      className={`experience-card${isActive ? " is-active" : ""}`}
+      delay={index * 0.08}
+      id={`experience-panel-${index}`}
+      role="tabpanel"
+      y={28}
+    >
       <div className="experience-head">
-        <span className="experience-number">{String(index + 1).padStart(2, "0")}</span>
         <div>
           <h3>{entry.company}</h3>
           <p>{entry.role}</p>
@@ -35,7 +39,6 @@ function WorkCard({ entry, index }: { entry: ExperienceEntry; index: number }) {
       </ul>
 
       {entry.note ? <p className="experience-note">{entry.note}</p> : null}
-      {nodes.length > 0 ? <SystemStrip nodes={nodes} /> : null}
 
       <GhostButton className="experience-link" href={profile.linkedin} rel="noreferrer" target="_blank">
         {profile.actions.details}
@@ -46,16 +49,35 @@ function WorkCard({ entry, index }: { entry: ExperienceEntry; index: number }) {
 }
 
 export function Work() {
+  const [activeExperience, setActiveExperience] = useState(0);
+
   return (
     <Panel className="work-panel" direction="left" id="work">
       <div className="panel-heading">
-        <span>05</span>
         <h2>{profile.sections.work}</h2>
+      </div>
+
+      <div className="experience-tabs" role="tablist" aria-label="Experience companies">
+        {profile.experience.map((entry, index) => (
+          <button
+            aria-controls={`experience-panel-${index}`}
+            aria-selected={activeExperience === index}
+            className="experience-tab"
+            id={`experience-tab-${index}`}
+            key={entry.company}
+            onClick={() => setActiveExperience(index)}
+            role="tab"
+            type="button"
+          >
+            <strong>{entry.company}</strong>
+            <span>{entry.role}</span>
+          </button>
+        ))}
       </div>
 
       <div className="experience-grid">
         {profile.experience.map((entry, index) => (
-          <WorkCard entry={entry} index={index} key={entry.company} />
+          <WorkCard entry={entry} index={index} isActive={activeExperience === index} key={entry.company} />
         ))}
       </div>
     </Panel>

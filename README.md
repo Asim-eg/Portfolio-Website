@@ -72,11 +72,19 @@ npm run preview
 
 ## Deploy on Vercel
 
-1. Import the GitHub repository in Vercel.
-2. Framework preset: `Vite`.
-3. Build command: `npm run build`.
-4. Output directory: `dist`.
-5. Deploy.
+This repo is a Vite app, not Next.js. The committed `vercel.json` pins the deployment settings:
+
+- Framework preset: `Vite`
+- Install command: `npm ci`
+- Build command: `npm run build`
+- Output directory: `dist`
+
+In Vercel, set the project **Root Directory** to the folder that contains `package.json`. For this repository that should normally be blank / repository root. Do not set the framework preset to `Next.js`.
+
+After deployment, verify:
+
+- Site: `/`
+- Resume PDF: `/Asim_Altaf_CV.pdf`
 
 ## Deploy on GitHub Pages
 

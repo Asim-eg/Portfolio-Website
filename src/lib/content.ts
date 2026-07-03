@@ -37,6 +37,12 @@ export type Hobby = {
   icon: "Network" | "Mountain" | "Plane" | "ShieldCheck";
 };
 
+export type Certification = {
+  title: string;
+  issuer: string;
+  year: string;
+};
+
 export type Education = {
   degree: string;
   school: string;
@@ -44,6 +50,8 @@ export type Education = {
   campusLabel: string;
   campusUrl: string;
   blurb: string;
+  certificationsTitle: string;
+  certifications: Certification[];
 };
 
 export type NavLink = {
