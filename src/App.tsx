@@ -190,7 +190,7 @@ export default function App() {
   const activeSection = sections[activeIndex];
 
   return (
-    <>
+    <div className="app-frame">
       <Nav activeHref={activeSection.href} onNavigate={navigateToHref} />
       <SectionControls activeIndex={activeIndex} onNavigate={navigateTo} sections={sections} />
       <main className="site-shell">
@@ -198,6 +198,6 @@ export default function App() {
           {activeSection.element}
         </DeckStage>
       </main>
-    </>
+    </div>
   );
 }
