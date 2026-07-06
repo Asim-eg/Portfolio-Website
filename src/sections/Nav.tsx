@@ -110,8 +110,8 @@ export function Nav({ activeHref, onNavigate }: NavProps) {
       </header>
 
       {menuOpen ? (
-        <div className="fixed inset-0 z-40 bg-black/95 pt-20 backdrop-blur md:hidden">
-          <div className="flex h-[calc(100svh-5rem)] flex-col justify-center gap-7 px-8">
+        <div className="mobile-menu fixed inset-0 z-40 bg-black/95 pt-20 backdrop-blur md:hidden">
+          <div className="mobile-menu-inner flex h-[calc(100svh-5rem)] flex-col justify-center gap-7 px-8">
             {[...profile.nav.links, ...profile.nav.actions].map((link, index) => (
               <a
                 className="menu-link font-display text-4xl font-black uppercase leading-none text-[#D7E2EA]"
