@@ -3,8 +3,8 @@ name: "Asim Altaf"
 tagline: "Backend Systems Engineer"
 heroHeadline: "I build backend systems that stay correct under load."
 heroSub: "Backend systems in C/C++ and Go: distributed services, event-driven
-telecom backends, real-time communication paths, and AI-assisted code
-validation workflows."
+telecom backends, real-time communication paths, and production debugging
+workflows."
 location: "Islamabad, Pakistan (UTC+5)"
 availability: "Available immediately · remote or relocation"
 email: "asimaltaf.dev@gmail.com"
@@ -12,7 +12,7 @@ phone: "+92-312-6358833"
 whatsapp: "923126358833"
 linkedin: "https://linkedin.com/in/asim-altaf"
 github: "https://github.com/AsimAltaf-eg"
-resume: "/resume/"
+resume: "/resume/index.html"
 portrait: "/media/asim-altaf.png"
 heroIntro: "ASIM ALTAF"
 heroKicker: "HIGH-PERFORMANCE BACKENDS FOR LIVE SYSTEMS"
@@ -66,7 +66,7 @@ marquee:
     - "USSD"
     - "SIGTRAN"
     - "UDM/UDR"
-    - "AI CODE REVIEW"
+    - "CODE REVIEW"
   row2:
     - "GO"
     - "DISTRIBUTED SYSTEMS"
@@ -188,13 +188,13 @@ stack:
   - group: "Telecom & data paths"
     items: "5G UDM · eSIM / RSP · USM · CBS · BSS · SS7/MAP ·
       SIP/RTP · HLR/HSS"
-  - group: "AI, infra & tooling"
-    items: "LLM code validation · Git/GitHub · Kubernetes · Docker ·
+  - group: "Infra & tooling"
+    items: "Code review · Git/GitHub · Kubernetes · Docker ·
       PostgreSQL · Redis · Jenkins · Valgrind · Benchmarking"
 howIWork: "I build backend systems where correctness, latency, and uptime
   matter: C/C++ event loops, Go services, telecom subscriber platforms,
-  real-time communication paths, and AI-assisted code validation before
-  generated code gets near production."
+  real-time communication paths, production debugging, and code review
+  practices."
 hobbies:
   - name: "Systems thinking"
     line: "I map states, edge cases, and failure modes."

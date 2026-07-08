@@ -27,12 +27,20 @@
         },
         {
           "key": "Content-Disposition",
-          "value": "inline; filename=\"Asim_Altaf_Resume.pdf\""
+          "value": "inline; filename=\"Asim_Altaf_CV.pdf\""
         }
       ]
     }
   ],
   "rewrites": [
+    {
+      "source": "/resume",
+      "destination": "/resume/index.html"
+    },
+    {
+      "source": "/resume/",
+      "destination": "/resume/index.html"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"

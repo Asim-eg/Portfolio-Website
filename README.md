@@ -85,7 +85,7 @@ In Vercel, set the project **Root Directory** to the folder that contains `packa
 After deployment, verify:
 
 - Site: `/`
-- Resume viewer: `/resume/`
+- Resume viewer: `/resume/index.html`
 - Resume PDF: `/Asim_Altaf_Resume.pdf`
 
 ## Deploy on GitHub Pages
@@ -102,4 +102,4 @@ npm run build
 
 ## Deviations
 
-`public/Asim_Altaf_Resume.pdf` is generated from the supplied resume PDF and carries explicit PDF metadata for search/share context. Resume buttons open `public/resume/index.html` so the browser tab title is controlled by the site while still embedding the same PDF.
+`public/Asim_Altaf_Resume.pdf` is generated from the supplied resume DOCX and carries explicit PDF metadata for search/share context. Resume buttons open `public/resume/index.html` so the browser tab title is controlled by the site while still embedding the same PDF.

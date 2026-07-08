@@ -1,9 +1,9 @@
 import {
-  BrainCircuit,
   BriefcaseBusiness,
   CheckCircle2,
   MapPin,
   Mountain,
+  Network,
   Plane,
   ShieldCheck,
   UserRound,
@@ -15,7 +15,7 @@ import { profile, type Hobby } from "../lib/content";
 
 const icons: Record<Hobby["icon"], LucideIcon> = {
   Mountain,
-  Network: BrainCircuit,
+  Network,
   Plane,
   ShieldCheck,
 };
@@ -24,7 +24,7 @@ const facts = [
   "Advanced C/C++, Go, distributed and real-time backend systems.",
   "Production debugging with profiling, Valgrind, memory analysis, and traces.",
   "Code review and maintainability across large C/C++ and Go codebases.",
-  "AI-assisted coding with validation for logic, memory, and concurrency.",
+  "Clear failure-mode analysis before changes reach production.",
 ];
 
 export function About() {
@@ -81,7 +81,7 @@ export function About() {
 
           <p className="about-personal-copy">
             Outside production systems: trails, travel, clear notes after messy incidents, and
-            steady practice with AI-assisted engineering tools.
+            steady practice with production-grade engineering tools.
           </p>
 
           <div className="personal-rows">

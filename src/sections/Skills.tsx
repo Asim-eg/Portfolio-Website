@@ -1,8 +1,6 @@
 import {
   Blocks,
-  Bot,
   Braces,
-  BrainCircuit,
   Bug,
   Cable,
   Code2,
@@ -19,7 +17,6 @@ import {
   PhoneCall,
   RadioTower,
   Router,
-  ScanSearch,
   Server,
   ServerCog,
   ShieldCheck,
@@ -31,10 +28,7 @@ import { Panel } from "../components/Panel";
 import { profile } from "../lib/content";
 
 const iconByNeedle: Array<[string, LucideIcon]> = [
-  ["LLM", Bot],
-  ["PROMPT", BrainCircuit],
-  ["GENERATED CODE", ScanSearch],
-  ["CODE VALIDATION", ScanSearch],
+  ["CODE REVIEW", GitBranch],
   ["GIT", GitBranch],
   ["BENCHMARK", Gauge],
   ["VALGRIND", Bug],
@@ -80,9 +74,7 @@ const iconByNeedle: Array<[string, LucideIcon]> = [
 const groupIcons: Record<string, LucideIcon> = {
   "Systems & languages": Cpu,
   "Telecom & data paths": RadioTower,
-  "AI, infra & tooling": BrainCircuit,
   "Infra & tooling": ServerCog,
-  "AI-assisted development": BrainCircuit,
   "Signalling & Core": RadioTower,
   "Signalling & core": RadioTower,
   "eSIM / RSP": SmartphoneNfc,
