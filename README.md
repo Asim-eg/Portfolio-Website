@@ -102,4 +102,4 @@ npm run build
 
 ## Deviations
 
-`public/Asim_Altaf_Resume.pdf` is generated from the supplied resume DOCX and carries explicit PDF metadata for search/share context. Resume buttons open `public/resume/index.html` so the browser tab title is controlled by the site while still embedding the same PDF.
+`public/Asim_Altaf_Resume.pdf` uses the supplied resume PDF directly, with its Asim Altaf metadata intact. Resume buttons open `public/resume/index.html` so the browser tab title is controlled by the site while still embedding the same PDF.
